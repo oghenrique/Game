@@ -45,7 +45,16 @@ public class Battle {
                 System.out.println("-------------------------------");
 
                 int danoPlayer = (int) (Math.random() * 20) + 1;
-                enemy.SubtrairVida(danoPlayer);
+                int defEnemy = (int) (Math.random() * 20) + 1;
+
+                int danoDefesa  = danoPlayer - defEnemy;
+
+                if (danoDefesa < 0){
+                    danoDefesa = 0;
+                }
+
+
+                enemy.SubtrairVida(danoDefesa);
 
                 System.out.println("---------------------------------");
                 System.out.println(" O Ataque foi de: " + danoPlayer);
