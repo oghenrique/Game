@@ -59,19 +59,33 @@ public class Battle {
                 System.out.println("---------------------------------");
                 System.out.println(" O Ataque foi de: " + danoPlayer);
                 System.out.println("---------------------------------");
+                System.out.println(" Porém o ataque foi defendido: " + defEnemy);
+                System.out.println("---------------------------------");
 
 
             } else if (attack.equalsIgnoreCase("X")) {
 
+
+
                 System.out.println("-------------------------------");
                 System.out.println("-          Enemy Atacou       -");
-                System.out.println("-------------------------------");
+                System.out.println("---------------------------------");
 
                 int danoEnemy = (int) (Math.random() * 20) + 1;
+                int defPlayer = (int) (Math.random() * 20) + 1;
+
+                int danoDefesa  = danoEnemy- defPlayer;
+
+                if (danoDefesa < 0){
+                    danoDefesa = 0;
+                }
+
                 player.SubtrairVida(danoEnemy);
 
                 System.out.println("---------------------------------");
                 System.out.println(" O Ataque foi de: " + danoEnemy);
+                System.out.println("---------------------------------");
+                System.out.println(" Porém o ataque foi defendido: " + defPlayer);
                 System.out.println("---------------------------------");
 
 
