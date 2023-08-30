@@ -3,23 +3,23 @@ package br.senai.sp.jandira.game.Model;
 import java.util.Scanner;
 
 public class Menu {
-
-    public void  Menu(){
+    public void Menu(){
 
         Scanner teclado = new Scanner(System.in);
         Register register = new Register();
         Battle battle = new Battle();
 
-        boolean continuar = true;
+        boolean exit = false;
 
-        while (continuar){
-            System.out.println("--------------------------------------");
-            System.out.println("------------- BEM VINDO --------------");
+        while (!exit){
+            System.out.println("-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/");
+            System.out.println("----------  Bem Vindo  ---------");
             System.out.println("Escolha uma das Opções: ");
             System.out.println("1 - Register");
             System.out.println("2 - Battle");
             System.out.println("3 - Exit");
-            System.out.println("--------------------------------------");
+            System.out.println("--------------------------------");
+            System.out.println("-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/");
 
             int userOption = teclado.nextInt();
 
@@ -30,17 +30,15 @@ public class Menu {
                     break;
 
                 case 2:
-                    //battle.Battle();
-                    System.out.println("Feature in Development");
+                    battle.ChoiceScenario();
+                    battle.Battle(register.player, register.enemy);
                     break;
 
                 case 3:
-                    continuar = false;
+                    exit = true;
                     break;
-
-
-
             }
         }
     }
+
 }

@@ -8,15 +8,9 @@ import java.sql.SQLOutput;
 public class Main {
     public static void main(String[] args) {
 
+        /** Instancia Menu */
         Menu menu = new Menu();
-
         menu.Menu();
-
-        /** Instancia Register */
-        Register register = new Register();
-
-        register.Decision();
-
 
     }
 
