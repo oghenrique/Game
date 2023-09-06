@@ -80,7 +80,7 @@ public class Battle {
                     danoDefesa = 0;
                 }
 
-                player.SubtrairVida(danoEnemy);
+                player.SubtrairVida(danoDefesa);
 
                 System.out.println("---------------------------------");
                 System.out.println(" O Ataque foi de: " + danoEnemy);
